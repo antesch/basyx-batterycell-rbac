@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "56b16e47-fa52-4f55-a373-0c88d78c290f",
-		"name": "Demo-Batterycell-Local",
+		"_postman_id": "de5042b0-2852-454b-9b40-3942fccba0ac",
+		"name": "Demo-Batterycell-RBAC",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "41540389"
 	},
@@ -88,12 +88,12 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u",
+											"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u",
 											"host": [
 												"{{dataspace_url}}"
 											],
-											"port": "8089",
 											"path": [
+												"conf-security-submodel",
 												"submodels",
 												"{{security_submodel_id}}",
 												"submodel-elements",
@@ -176,12 +176,12 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlcG9zaXRvcnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLkFhc1RhcmdldEluZm9ybWF0aW9u",
+											"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlcG9zaXRvcnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLkFhc1RhcmdldEluZm9ybWF0aW9u",
 											"host": [
 												"{{dataspace_url}}"
 											],
-											"port": "8089",
 											"path": [
+												"conf-security-submodel",
 												"submodels",
 												"{{security_submodel_id}}",
 												"submodel-elements",
@@ -264,12 +264,12 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVnaXN0cnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLlN1Ym1vZGVsUmVnaXN0cnlUYXJnZXRJbmZvcm1hdGlvbg==",
+											"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVnaXN0cnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLlN1Ym1vZGVsUmVnaXN0cnlUYXJnZXRJbmZvcm1hdGlvbg==",
 											"host": [
 												"{{dataspace_url}}"
 											],
-											"port": "8089",
 											"path": [
+												"conf-security-submodel",
 												"submodels",
 												"{{security_submodel_id}}",
 												"submodel-elements",
@@ -352,12 +352,12 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVwb3NpdG9yeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uU3VibW9kZWxUYXJnZXRJbmZvcm1hdGlvbg==",
+											"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVwb3NpdG9yeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uU3VibW9kZWxUYXJnZXRJbmZvcm1hdGlvbg==",
 											"host": [
 												"{{dataspace_url}}"
 											],
-											"port": "8089",
 											"path": [
+												"conf-security-submodel",
 												"submodels",
 												"{{security_submodel_id}}",
 												"submodel-elements",
@@ -451,12 +451,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -535,12 +535,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -614,12 +614,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -693,12 +693,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -788,12 +788,12 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u",
+											"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u",
 											"host": [
 												"{{dataspace_url}}"
 											],
-											"port": "8089",
 											"path": [
+												"conf-security-submodel",
 												"submodels",
 												"{{security_submodel_id}}",
 												"submodel-elements",
@@ -876,12 +876,12 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlcG9zaXRvcnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLkFhc1RhcmdldEluZm9ybWF0aW9u",
+											"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlcG9zaXRvcnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLkFhc1RhcmdldEluZm9ybWF0aW9u",
 											"host": [
 												"{{dataspace_url}}"
 											],
-											"port": "8089",
 											"path": [
+												"conf-security-submodel",
 												"submodels",
 												"{{security_submodel_id}}",
 												"submodel-elements",
@@ -964,12 +964,12 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVnaXN0cnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLlN1Ym1vZGVsUmVnaXN0cnlUYXJnZXRJbmZvcm1hdGlvbg==",
+											"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVnaXN0cnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLlN1Ym1vZGVsUmVnaXN0cnlUYXJnZXRJbmZvcm1hdGlvbg==",
 											"host": [
 												"{{dataspace_url}}"
 											],
-											"port": "8089",
 											"path": [
+												"conf-security-submodel",
 												"submodels",
 												"{{security_submodel_id}}",
 												"submodel-elements",
@@ -1052,12 +1052,12 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVwb3NpdG9yeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uU3VibW9kZWxUYXJnZXRJbmZvcm1hdGlvbg==",
+											"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVwb3NpdG9yeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uU3VibW9kZWxUYXJnZXRJbmZvcm1hdGlvbg==",
 											"host": [
 												"{{dataspace_url}}"
 											],
-											"port": "8089",
 											"path": [
+												"conf-security-submodel",
 												"submodels",
 												"{{security_submodel_id}}",
 												"submodel-elements",
@@ -1151,12 +1151,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -1235,12 +1235,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -1314,12 +1314,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -1393,12 +1393,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -1488,12 +1488,12 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguYWFzcmVnaXN0cnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLkFhc1JlZ2lzdHJ5VGFyZ2V0SW5mb3JtYXRpb24=",
+											"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguYWFzcmVnaXN0cnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLkFhc1JlZ2lzdHJ5VGFyZ2V0SW5mb3JtYXRpb24=",
 											"host": [
 												"{{dataspace_url}}"
 											],
-											"port": "8089",
 											"path": [
+												"conf-security-submodel",
 												"submodels",
 												"{{security_submodel_id}}",
 												"submodel-elements",
@@ -1576,12 +1576,12 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguYWFzcmVwb3NpdG9yeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uQWFzVGFyZ2V0SW5mb3JtYXRpb24=",
+											"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguYWFzcmVwb3NpdG9yeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uQWFzVGFyZ2V0SW5mb3JtYXRpb24=",
 											"host": [
 												"{{dataspace_url}}"
 											],
-											"port": "8089",
 											"path": [
+												"conf-security-submodel",
 												"submodels",
 												"{{security_submodel_id}}",
 												"submodel-elements",
@@ -1664,12 +1664,12 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguc3VibW9kZWxyZWdpc3RyeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uU3VibW9kZWxSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u",
+											"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguc3VibW9kZWxyZWdpc3RyeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uU3VibW9kZWxSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u",
 											"host": [
 												"{{dataspace_url}}"
 											],
-											"port": "8089",
 											"path": [
+												"conf-security-submodel",
 												"submodels",
 												"{{security_submodel_id}}",
 												"submodel-elements",
@@ -1752,12 +1752,12 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguc3VibW9kZWxyZXBvc2l0b3J5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5TdWJtb2RlbFRhcmdldEluZm9ybWF0aW9u",
+											"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguc3VibW9kZWxyZXBvc2l0b3J5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5TdWJtb2RlbFRhcmdldEluZm9ybWF0aW9u",
 											"host": [
 												"{{dataspace_url}}"
 											],
-											"port": "8089",
 											"path": [
+												"conf-security-submodel",
 												"submodels",
 												"{{security_submodel_id}}",
 												"submodel-elements",
@@ -1851,12 +1851,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -1935,12 +1935,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -2014,12 +2014,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -2093,12 +2093,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -2188,12 +2188,12 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5hYXNyZWdpc3RyeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uQWFzUmVnaXN0cnlUYXJnZXRJbmZvcm1hdGlvbg==",
+											"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5hYXNyZWdpc3RyeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uQWFzUmVnaXN0cnlUYXJnZXRJbmZvcm1hdGlvbg==",
 											"host": [
 												"{{dataspace_url}}"
 											],
-											"port": "8089",
 											"path": [
+												"conf-security-submodel",
 												"submodels",
 												"{{security_submodel_id}}",
 												"submodel-elements",
@@ -2276,12 +2276,12 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5hYXNyZXBvc2l0b3J5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNUYXJnZXRJbmZvcm1hdGlvbg==",
+											"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5hYXNyZXBvc2l0b3J5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNUYXJnZXRJbmZvcm1hdGlvbg==",
 											"host": [
 												"{{dataspace_url}}"
 											],
-											"port": "8089",
 											"path": [
+												"conf-security-submodel",
 												"submodels",
 												"{{security_submodel_id}}",
 												"submodel-elements",
@@ -2364,12 +2364,12 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5zdWJtb2RlbHJlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5TdWJtb2RlbFJlZ2lzdHJ5VGFyZ2V0SW5mb3JtYXRpb24=",
+											"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5zdWJtb2RlbHJlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5TdWJtb2RlbFJlZ2lzdHJ5VGFyZ2V0SW5mb3JtYXRpb24=",
 											"host": [
 												"{{dataspace_url}}"
 											],
-											"port": "8089",
 											"path": [
+												"conf-security-submodel",
 												"submodels",
 												"{{security_submodel_id}}",
 												"submodel-elements",
@@ -2452,12 +2452,12 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5zdWJtb2RlbHJlcG9zaXRvcnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLlN1Ym1vZGVsVGFyZ2V0SW5mb3JtYXRpb24=",
+											"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5zdWJtb2RlbHJlcG9zaXRvcnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLlN1Ym1vZGVsVGFyZ2V0SW5mb3JtYXRpb24=",
 											"host": [
 												"{{dataspace_url}}"
 											],
-											"port": "8089",
 											"path": [
+												"conf-security-submodel",
 												"submodels",
 												"{{security_submodel_id}}",
 												"submodel-elements",
@@ -2551,12 +2551,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -2635,12 +2635,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -2714,12 +2714,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -2793,12 +2793,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -2818,11 +2818,10 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{dataspace_url}}:5000/product-scheduler/reset-production/{{dpp_prod_id_1}}",
+									"raw": "{{dataspace_url}}/product-scheduler/reset-production/{{dpp_prod_id_1}}",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "5000",
 									"path": [
 										"product-scheduler",
 										"reset-production",
@@ -2838,11 +2837,10 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{dataspace_url}}:5000/product-scheduler/start-production/{{dpp_prod_id_1}}",
+									"raw": "{{dataspace_url}}/product-scheduler/start-production/{{dpp_prod_id_1}}",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "5000",
 									"path": [
 										"product-scheduler",
 										"start-production",
@@ -2913,12 +2911,12 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/R2VhclN1cHBsaWVyUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements/R2VhclN1cHBsaWVyUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements",
@@ -2984,12 +2982,12 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}"
 									]
@@ -3062,12 +3060,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}/submodel-elements",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}",
 										"submodel-elements"
@@ -3126,17 +3124,21 @@
 											"key": "addTokenTo",
 											"value": "header",
 											"type": "string"
+										},
+										{
+											"key": "refreshTokenUrl",
+											"value": "",
+											"type": "string"
 										}
 									]
 								},
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}",
+									"raw": "{{dataspace_url}}/submodels/{{security_submodel_id}}",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
 										"submodels",
 										"{{security_submodel_id}}"
@@ -3210,12 +3212,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{dataspace_url}}:8089/submodels",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels",
 									"host": [
 										"{{dataspace_url}}"
 									],
-									"port": "8089",
 									"path": [
+										"conf-security-submodel",
 										"submodels"
 									]
 								}
@@ -3268,7 +3270,7 @@
 		},
 		{
 			"key": "supplier_frame_username",
-			"value": "alice"
+			"value": ""
 		},
 		{
 			"key": "supplier_frame_password",
@@ -3349,7 +3351,7 @@
 		},
 		{
 			"key": "access_token_url",
-			"value": "http://localhost:9097/realms/D4E/protocol/openid-connect/token",
+			"value": "http://localhost/identity-management/realms/D4E/protocol/openid-connect/token",
 			"type": "string"
 		},
 		{

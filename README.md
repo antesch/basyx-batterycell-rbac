@@ -23,7 +23,7 @@ docker compose up -d
 ### How to use
 
 1. Open Postman
-2. Import the [collection](./Demo-Batterycell-RBAC.postman_collection.json)
+2. Import the [collection](./postman/Demo-Batterycell-RBAC.postman_collection.json)
 3. Go through the following steps to start production and and visualize in the AAS GUI
 
 
