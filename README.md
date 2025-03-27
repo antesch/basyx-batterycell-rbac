@@ -4,17 +4,21 @@ This demo shows the prodcution scheduling in a factory and also calculates the c
 
 It is possible that the line ending of 'entrypoint.sh' changes from LF to CRLF when checking out to a Windows host. Please check and change if necessary (e.g. in Notepad++ or VSCode), otherwise the security submodel cannot be initialized.
 
-## Running the demo
+### Running the demo on localhost
 
-To run the demo containers, you need to have Docker installed on your device.
+To run the demo containers on your localhost, you need to have Docker installed on your device. You need to use the environment file for localhost '.env.localhost'
+
+```sh
+docker compose --env-file .env.localhost up
+```
+
+The AAS UI will be available under http://localhost:${PORT}/${WEB_UI_BASE_PATH}, typically http://localhost:8080/aas-gui/
+Keycloak will run under http://localhost:${PORT}/${KC_HTTP_RELATIVE_PATH}, typically http://localhost:8080/identity-management/
 
 
-### Setup Hostname in .env
+### Deploying the demo on a remote host
 
 If the demo is not to run on the local host, the respective host name and port must be defined in the .env file. In addition, a proxy can be specified so that APT and Maven have access to the repositories during the installation. The port that must be specified is basically the port to which the reverse proxy (nginx) listens and forwards the incoming requests to the respective services.
-
-
-### Run the BaSyx containers including the Production Scheduler container
 
 ```sh
 docker compose up -d
