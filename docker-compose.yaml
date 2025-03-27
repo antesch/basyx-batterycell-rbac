@@ -9,6 +9,7 @@ services:
         HTTP_PROXY: ${HTTP_PROXY}
         HTTPS_PROXY: ${HTTPS_PROXY}
     container_name: keycloak
+    restart: always
     environment:
       HOSTNAME: ${HOSTNAME}
       PORT: ${PORT}
@@ -43,6 +44,7 @@ services:
   nginx:
     container_name: nginx
     build: ./nginx
+    restart: always
     environment:
       - HOSTNAME=${HOSTNAME}
       - PORT=${PORT}
@@ -62,6 +64,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongoAdmin
       MONGO_INITDB_ROOT_PASSWORD: mongoPassword
+    restart: always
     ports:
       - 27017:27017
     networks:
