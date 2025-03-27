@@ -34,7 +34,7 @@ docker compose up -d
 ## Scenario
 
 ### Login and uploading AAS
-1. Log in to the UI with Admin account to show case all AAS availability for Admin. The address of the UI depends on the HOSTNAME setting from .env. On localhost it would be http://localhost/aas-gui/
+1. Log in to the UI with Admin account to show case all AAS availability for Admin.
 
 ```
 username: d4e.admin
