@@ -3135,11 +3135,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{dataspace_url}}/submodels/{{security_submodel_id}}",
+									"raw": "{{dataspace_url}}/conf-security-submodel/submodels/{{security_submodel_id}}",
 									"host": [
 										"{{dataspace_url}}"
 									],
 									"path": [
+										"conf-security-submodel",
 										"submodels",
 										"{{security_submodel_id}}"
 									]
