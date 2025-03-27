@@ -12,6 +12,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<bytebuddy.version>1.14.11</bytebuddy.version>
 		<slf4j.version>2.0.13</slf4j.version>
+		<maven-shade.plugin.version>3.5.0</maven-shade.plugin.version>
 	</properties>
 
 	<dependencies>
@@ -80,6 +81,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
+				<version>${maven-shade.plugin.version}</version>
 				<executions>
 					<execution>
 						<phase>package</phase>

@@ -1,0 +1,11 @@
+<settings>
+  <proxies>
+    <proxy>
+      <id>corporate-proxy</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <host>wwwproxy.iese.de</host>
+      <port>81</port>
+    </proxy>
+  </proxies>
+</settings>
