@@ -39,17 +39,17 @@ docker compose up -d
 ### How to use
 
 1. Open Postman
-2. Import the [collection](./Demo-Batterycell-Local.postman_collection.json)
-3. Go through the following steps to start production and and visualize in the [AAS GUI](http://localhost:3000) 
+2. Import the [collection](./Demo-Batterycell-RBAC.postman_collection.json)
+3. Go through the following steps to start production and and visualize in the AAS GUI
 
 
 ## Scenario
 
 ### Login and uploading AAS
-1. Log in to the UI with Admin account to show case all AAS availability for Admin:
+1. Log in to the UI with Admin account to show case all AAS availability for Admin. The address of the UI depends on the HOSTNAME setting from .env. On localhost it would be http://localhost/aas-gui/
 
 ```
-username: admin
+username: d4e.admin
 password: changeit
 ```
 
@@ -81,7 +81,7 @@ Repo.
 3. Execute all the requests under CustomerOne folder in a sequence (if you
 encounter 401, switch to Authorization Tab inside Postman request and go to the
 very bottom and hit "Get New Access Token" and then again Send Request).
-4. Now head to the AAS GUI https://localhost:3000, and login as Customer One again.
+4. Now head to the AAS GUI and login as Customer One again.
 5. The DPPProductID1 will now be displayed on Customer One's account.
 6. Now click on DPPProductID1 on the GUI - only Order and CarbonFootprint
 Submodels are authorized and visible.
