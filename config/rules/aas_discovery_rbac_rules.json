@@ -1,0 +1,43 @@
+[
+  {
+    "role": "admin",
+    "action": "CREATE",
+    "targetInformation": {
+      "@type": "aas-discovery-service",
+      "aasIds": "*",
+      "assetIds": []
+    }
+  },
+  {
+    "role": "admin",
+    "action": "READ",
+    "targetInformation": {
+      "@type": "aas-discovery-service",
+      "aasIds": "*",
+      "assetIds": []
+    }
+  },
+  {
+    "role": "admin",
+    "action": "DELETE",
+    "targetInformation": {
+      "@type": "aas-discovery-service",
+      "aasIds": "*",
+      "assetIds": []
+    }
+  },
+  {
+    "role": "admin",
+    "action": "READ",
+    "targetInformation": {
+      "@type": "aas-discovery-service",
+      "aasIds": null,
+      "assetIds": [
+        {
+          "name": "*",
+          "value": "*"
+        }
+      ]
+    }
+  }
+]

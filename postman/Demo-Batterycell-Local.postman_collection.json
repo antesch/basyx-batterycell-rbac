@@ -1,0 +1,3375 @@
+{
+	"info": {
+		"_postman_id": "56b16e47-fa52-4f55-a373-0c88d78c290f",
+		"name": "Demo-Batterycell-Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41540389"
+	},
+	"item": [
+		{
+			"name": "Rules",
+			"item": [
+				{
+					"name": "CustomerOne",
+					"item": [
+						{
+							"name": "ResetRules",
+							"item": [
+								{
+									"name": "Reset_AASRegistry",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "{{workstation_1_clientsecret}}",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "{{workstation_1_clientid}}",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "{{access_token_url}}",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "FrameSuppplierToken",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u",
+											"host": [
+												"{{dataspace_url}}"
+											],
+											"port": "8089",
+											"path": [
+												"submodels",
+												"{{security_submodel_id}}",
+												"submodel-elements",
+												"Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Reset_AASRepo",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "{{workstation_1_clientsecret}}",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "{{workstation_1_clientid}}",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "{{access_token_url}}",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "FrameSuppplierToken",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlcG9zaXRvcnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLkFhc1RhcmdldEluZm9ybWF0aW9u",
+											"host": [
+												"{{dataspace_url}}"
+											],
+											"port": "8089",
+											"path": [
+												"submodels",
+												"{{security_submodel_id}}",
+												"submodel-elements",
+												"Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlcG9zaXRvcnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLkFhc1RhcmdldEluZm9ybWF0aW9u"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Reset_SMReg",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "{{workstation_1_clientsecret}}",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "{{workstation_1_clientid}}",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "{{access_token_url}}",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "FrameSuppplierToken",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVnaXN0cnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLlN1Ym1vZGVsUmVnaXN0cnlUYXJnZXRJbmZvcm1hdGlvbg==",
+											"host": [
+												"{{dataspace_url}}"
+											],
+											"port": "8089",
+											"path": [
+												"submodels",
+												"{{security_submodel_id}}",
+												"submodel-elements",
+												"Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVnaXN0cnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLlN1Ym1vZGVsUmVnaXN0cnlUYXJnZXRJbmZvcm1hdGlvbg=="
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Reset_SMRepo",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "{{workstation_1_clientsecret}}",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "{{workstation_1_clientid}}",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "{{access_token_url}}",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "FrameSuppplierToken",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVwb3NpdG9yeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uU3VibW9kZWxUYXJnZXRJbmZvcm1hdGlvbg==",
+											"host": [
+												"{{dataspace_url}}"
+											],
+											"port": "8089",
+											"path": [
+												"submodels",
+												"{{security_submodel_id}}",
+												"submodel-elements",
+												"Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVwb3NpdG9yeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uU3VibW9kZWxUYXJnZXRJbmZvcm1hdGlvbg=="
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "CustomerOne_AASRegistry",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "FrameSuppplierToken",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "refreshTokenUrl",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"modelType\": \"SubmodelElementCollection\",\r\n  \"idShort\": \"Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u\",\r\n  \"value\": [\r\n      {\r\n          \"modelType\": \"Property\",\r\n          \"value\": \"Customer_One\",\r\n          \"idShort\": \"role\"\r\n      },\r\n      {\r\n          \"modelType\": \"SubmodelElementList\",\r\n          \"idShort\": \"action\",\r\n          \"orderRelevant\": true,\r\n          \"value\": [\r\n              {\r\n                  \"modelType\": \"Property\",\r\n                  \"value\": \"READ\"\r\n              }\r\n          ]\r\n      },\r\n      {\r\n          \"modelType\": \"SubmodelElementCollection\",\r\n          \"idShort\": \"targetInformation\",\r\n          \"value\": [\r\n              {\r\n                  \"modelType\": \"SubmodelElementList\",\r\n                  \"idShort\": \"aasIds\",\r\n                  \"orderRelevant\": true,\r\n                  \"value\": [\r\n                      {\r\n                          \"modelType\": \"Property\",\r\n                          \"value\": \"DPPProductID1\"\r\n                      }\r\n                  ]\r\n              },\r\n              {\r\n                  \"modelType\": \"Property\",\r\n                  \"value\": \"aas-registry\",\r\n                  \"idShort\": \"@type\"\r\n              }\r\n          ]\r\n      }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerOne_AASRepo",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "FrameSuppplierToken",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{supplier_frame_password}}",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{supplier_frame_username}}",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"modelType\": \"SubmodelElementCollection\",\r\n  \"idShort\": \"Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlcG9zaXRvcnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLkFhc1RhcmdldEluZm9ybWF0aW9u\",\r\n  \"value\": [\r\n      {\r\n          \"modelType\": \"Property\",\r\n          \"value\": \"Customer_One\",\r\n          \"idShort\": \"role\"\r\n      },\r\n      {\r\n          \"modelType\": \"SubmodelElementList\",\r\n          \"idShort\": \"action\",\r\n          \"orderRelevant\": true,\r\n          \"value\": [\r\n              {\r\n                  \"modelType\": \"Property\",\r\n                  \"value\": \"READ\"\r\n              }\r\n          ]\r\n      },\r\n      {\r\n          \"modelType\": \"SubmodelElementCollection\",\r\n          \"idShort\": \"targetInformation\",\r\n          \"value\": [\r\n              {\r\n                  \"modelType\": \"SubmodelElementList\",\r\n                  \"idShort\": \"aasIds\",\r\n                  \"orderRelevant\": true,\r\n                  \"value\": [\r\n                      {\r\n                          \"modelType\": \"Property\",\r\n                          \"value\": \"DPPProductID1\"\r\n                      }\r\n                  ]\r\n              },\r\n              {\r\n                  \"modelType\": \"Property\",\r\n                  \"value\": \"aas\",\r\n                  \"idShort\": \"@type\"\r\n              }\r\n          ]\r\n      }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerOne_SMRegAllSMCombinedRules",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "FrameSuppplierToken",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{supplier_frame_password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{supplier_frame_username}}",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"modelType\": \"SubmodelElementCollection\",\r\n    \"idShort\": \"Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVnaXN0cnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLlN1Ym1vZGVsUmVnaXN0cnlUYXJnZXRJbmZvcm1hdGlvbg==\",\r\n    \"value\": [\r\n        {\r\n            \"modelType\": \"Property\",\r\n            \"value\": \"Customer_One\",\r\n            \"idShort\": \"role\"\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementList\",\r\n            \"idShort\": \"action\",\r\n            \"orderRelevant\": true,\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"READ\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementCollection\",\r\n            \"idShort\": \"targetInformation\",\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"SubmodelElementList\",\r\n                    \"idShort\": \"submodelIds\",\r\n                    \"orderRelevant\": true,\r\n                    \"value\": [\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/9355_0120_2142_5668\"\r\n                        },\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/9023_9112_1042_0343\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"submodel-registry\",\r\n                    \"idShort\": \"@type\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerOne_SMRepoAllSMCombinedRules",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "FrameSuppplierToken",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{supplier_frame_password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{supplier_frame_username}}",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"modelType\": \"SubmodelElementCollection\",\r\n    \"idShort\": \"Q3VzdG9tZXJfT25lUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVwb3NpdG9yeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uU3VibW9kZWxUYXJnZXRJbmZvcm1hdGlvbg==\",\r\n    \"value\": [\r\n        {\r\n            \"modelType\": \"Property\",\r\n            \"value\": \"Customer_One\",\r\n            \"idShort\": \"role\"\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementList\",\r\n            \"idShort\": \"action\",\r\n            \"orderRelevant\": true,\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"READ\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementCollection\",\r\n            \"idShort\": \"targetInformation\",\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"SubmodelElementList\",\r\n                    \"idShort\": \"submodelIds\",\r\n                    \"orderRelevant\": true,\r\n                    \"value\": [\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/9355_0120_2142_5668\"\r\n                        },\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/9023_9112_1042_0343\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"modelType\": \"SubmodelElementList\",\r\n                    \"idShort\": \"submodelElementIdShortPaths\",\r\n                    \"orderRelevant\": true,\r\n                    \"value\": [\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"*\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"submodel\",\r\n                    \"idShort\": \"@type\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CustomerTwo",
+					"item": [
+						{
+							"name": "ResetRules",
+							"item": [
+								{
+									"name": "Reset_AASRegistry",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "{{workstation_1_clientsecret}}",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "{{workstation_1_clientid}}",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "{{access_token_url}}",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "FrameSuppplierToken",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u",
+											"host": [
+												"{{dataspace_url}}"
+											],
+											"port": "8089",
+											"path": [
+												"submodels",
+												"{{security_submodel_id}}",
+												"submodel-elements",
+												"Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Reset_AASRepo",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "{{workstation_1_clientsecret}}",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "{{workstation_1_clientid}}",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "{{access_token_url}}",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "FrameSuppplierToken",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlcG9zaXRvcnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLkFhc1RhcmdldEluZm9ybWF0aW9u",
+											"host": [
+												"{{dataspace_url}}"
+											],
+											"port": "8089",
+											"path": [
+												"submodels",
+												"{{security_submodel_id}}",
+												"submodel-elements",
+												"Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlcG9zaXRvcnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLkFhc1RhcmdldEluZm9ybWF0aW9u"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Reset_SMReg",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "{{workstation_1_clientsecret}}",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "{{workstation_1_clientid}}",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "{{access_token_url}}",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "FrameSuppplierToken",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVnaXN0cnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLlN1Ym1vZGVsUmVnaXN0cnlUYXJnZXRJbmZvcm1hdGlvbg==",
+											"host": [
+												"{{dataspace_url}}"
+											],
+											"port": "8089",
+											"path": [
+												"submodels",
+												"{{security_submodel_id}}",
+												"submodel-elements",
+												"Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVnaXN0cnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLlN1Ym1vZGVsUmVnaXN0cnlUYXJnZXRJbmZvcm1hdGlvbg=="
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Reset_SMRepo",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "{{workstation_1_clientsecret}}",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "{{workstation_1_clientid}}",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "{{access_token_url}}",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "FrameSuppplierToken",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVwb3NpdG9yeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uU3VibW9kZWxUYXJnZXRJbmZvcm1hdGlvbg==",
+											"host": [
+												"{{dataspace_url}}"
+											],
+											"port": "8089",
+											"path": [
+												"submodels",
+												"{{security_submodel_id}}",
+												"submodel-elements",
+												"Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVwb3NpdG9yeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uU3VibW9kZWxUYXJnZXRJbmZvcm1hdGlvbg=="
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "CustomerTwo_AASRegistry",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "FrameSuppplierToken",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "refreshTokenUrl",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"modelType\": \"SubmodelElementCollection\",\r\n  \"idShort\": \"Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u\",\r\n  \"value\": [\r\n      {\r\n          \"modelType\": \"Property\",\r\n          \"value\": \"Customer_Two\",\r\n          \"idShort\": \"role\"\r\n      },\r\n      {\r\n          \"modelType\": \"SubmodelElementList\",\r\n          \"idShort\": \"action\",\r\n          \"orderRelevant\": true,\r\n          \"value\": [\r\n              {\r\n                  \"modelType\": \"Property\",\r\n                  \"value\": \"READ\"\r\n              }\r\n          ]\r\n      },\r\n      {\r\n          \"modelType\": \"SubmodelElementCollection\",\r\n          \"idShort\": \"targetInformation\",\r\n          \"value\": [\r\n              {\r\n                  \"modelType\": \"SubmodelElementList\",\r\n                  \"idShort\": \"aasIds\",\r\n                  \"orderRelevant\": true,\r\n                  \"value\": [\r\n                      {\r\n                          \"modelType\": \"Property\",\r\n                          \"value\": \"DPPProductID2\"\r\n                      }\r\n                  ]\r\n              },\r\n              {\r\n                  \"modelType\": \"Property\",\r\n                  \"value\": \"aas-registry\",\r\n                  \"idShort\": \"@type\"\r\n              }\r\n          ]\r\n      }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerTwo_AASRepo",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "FrameSuppplierToken",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{supplier_frame_password}}",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{supplier_frame_username}}",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"modelType\": \"SubmodelElementCollection\",\r\n  \"idShort\": \"Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlcG9zaXRvcnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLkFhc1RhcmdldEluZm9ybWF0aW9u\",\r\n  \"value\": [\r\n      {\r\n          \"modelType\": \"Property\",\r\n          \"value\": \"Customer_Two\",\r\n          \"idShort\": \"role\"\r\n      },\r\n      {\r\n          \"modelType\": \"SubmodelElementList\",\r\n          \"idShort\": \"action\",\r\n          \"orderRelevant\": true,\r\n          \"value\": [\r\n              {\r\n                  \"modelType\": \"Property\",\r\n                  \"value\": \"READ\"\r\n              }\r\n          ]\r\n      },\r\n      {\r\n          \"modelType\": \"SubmodelElementCollection\",\r\n          \"idShort\": \"targetInformation\",\r\n          \"value\": [\r\n              {\r\n                  \"modelType\": \"SubmodelElementList\",\r\n                  \"idShort\": \"aasIds\",\r\n                  \"orderRelevant\": true,\r\n                  \"value\": [\r\n                      {\r\n                          \"modelType\": \"Property\",\r\n                          \"value\": \"DPPProductID2\"\r\n                      }\r\n                  ]\r\n              },\r\n              {\r\n                  \"modelType\": \"Property\",\r\n                  \"value\": \"aas\",\r\n                  \"idShort\": \"@type\"\r\n              }\r\n          ]\r\n      }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerTwo_SMRegAllSMCombinedRules",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "FrameSuppplierToken",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{supplier_frame_password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{supplier_frame_username}}",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"modelType\": \"SubmodelElementCollection\",\r\n    \"idShort\": \"Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVnaXN0cnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLlN1Ym1vZGVsUmVnaXN0cnlUYXJnZXRJbmZvcm1hdGlvbg==\",\r\n    \"value\": [\r\n        {\r\n            \"modelType\": \"Property\",\r\n            \"value\": \"Customer_Two\",\r\n            \"idShort\": \"role\"\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementList\",\r\n            \"idShort\": \"action\",\r\n            \"orderRelevant\": true,\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"READ\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementCollection\",\r\n            \"idShort\": \"targetInformation\",\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"SubmodelElementList\",\r\n                    \"idShort\": \"submodelIds\",\r\n                    \"orderRelevant\": true,\r\n                    \"value\": [\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/0075_0120_2142_0058\"\r\n                        },\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/8360_7132_3042_6119\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"submodel-registry\",\r\n                    \"idShort\": \"@type\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerTwo_SMRepoAllSMCombinedRules",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "FrameSuppplierToken",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{supplier_frame_password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{supplier_frame_username}}",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"modelType\": \"SubmodelElementCollection\",\r\n    \"idShort\": \"Q3VzdG9tZXJfVHdvUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LnN1Ym1vZGVscmVwb3NpdG9yeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uU3VibW9kZWxUYXJnZXRJbmZvcm1hdGlvbg==\",\r\n    \"value\": [\r\n        {\r\n            \"modelType\": \"Property\",\r\n            \"value\": \"Customer_One\",\r\n            \"idShort\": \"role\"\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementList\",\r\n            \"idShort\": \"action\",\r\n            \"orderRelevant\": true,\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"READ\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementCollection\",\r\n            \"idShort\": \"targetInformation\",\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"SubmodelElementList\",\r\n                    \"idShort\": \"submodelIds\",\r\n                    \"orderRelevant\": true,\r\n                    \"value\": [\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/0075_0120_2142_0058\"\r\n                        },\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/8360_7132_3042_6119\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"modelType\": \"SubmodelElementList\",\r\n                    \"idShort\": \"submodelElementIdShortPaths\",\r\n                    \"orderRelevant\": true,\r\n                    \"value\": [\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"*\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"submodel\",\r\n                    \"idShort\": \"@type\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CustomerThree",
+					"item": [
+						{
+							"name": "ResetRules",
+							"item": [
+								{
+									"name": "Reset_AASRegistry",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "{{workstation_1_clientsecret}}",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "{{workstation_1_clientid}}",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "{{access_token_url}}",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "FrameSuppplierToken",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguYWFzcmVnaXN0cnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLkFhc1JlZ2lzdHJ5VGFyZ2V0SW5mb3JtYXRpb24=",
+											"host": [
+												"{{dataspace_url}}"
+											],
+											"port": "8089",
+											"path": [
+												"submodels",
+												"{{security_submodel_id}}",
+												"submodel-elements",
+												"Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguYWFzcmVnaXN0cnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLkFhc1JlZ2lzdHJ5VGFyZ2V0SW5mb3JtYXRpb24="
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Reset_AASRepo",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "{{workstation_1_clientsecret}}",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "{{workstation_1_clientid}}",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "{{access_token_url}}",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "FrameSuppplierToken",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguYWFzcmVwb3NpdG9yeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uQWFzVGFyZ2V0SW5mb3JtYXRpb24=",
+											"host": [
+												"{{dataspace_url}}"
+											],
+											"port": "8089",
+											"path": [
+												"submodels",
+												"{{security_submodel_id}}",
+												"submodel-elements",
+												"Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguYWFzcmVwb3NpdG9yeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uQWFzVGFyZ2V0SW5mb3JtYXRpb24="
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Reset_SMReg",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "{{workstation_1_clientsecret}}",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "{{workstation_1_clientid}}",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "{{access_token_url}}",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "FrameSuppplierToken",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguc3VibW9kZWxyZWdpc3RyeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uU3VibW9kZWxSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u",
+											"host": [
+												"{{dataspace_url}}"
+											],
+											"port": "8089",
+											"path": [
+												"submodels",
+												"{{security_submodel_id}}",
+												"submodel-elements",
+												"Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguc3VibW9kZWxyZWdpc3RyeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uU3VibW9kZWxSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Reset_SMRepo",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "{{workstation_1_clientsecret}}",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "{{workstation_1_clientid}}",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "{{access_token_url}}",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "FrameSuppplierToken",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguc3VibW9kZWxyZXBvc2l0b3J5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5TdWJtb2RlbFRhcmdldEluZm9ybWF0aW9u",
+											"host": [
+												"{{dataspace_url}}"
+											],
+											"port": "8089",
+											"path": [
+												"submodels",
+												"{{security_submodel_id}}",
+												"submodel-elements",
+												"Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguc3VibW9kZWxyZXBvc2l0b3J5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5TdWJtb2RlbFRhcmdldEluZm9ybWF0aW9u"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "CustomerThree_AASRegistry",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{supplier_frame_password}}",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "FrameSuppplierToken",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "refreshTokenUrl",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{supplier_frame_username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"modelType\": \"SubmodelElementCollection\",\r\n  \"idShort\": \"Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguYWFzcmVnaXN0cnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLkFhc1JlZ2lzdHJ5VGFyZ2V0SW5mb3JtYXRpb24=\",\r\n  \"value\": [\r\n      {\r\n          \"modelType\": \"Property\",\r\n          \"value\": \"Customer_Three\",\r\n          \"idShort\": \"role\"\r\n      },\r\n      {\r\n          \"modelType\": \"SubmodelElementList\",\r\n          \"idShort\": \"action\",\r\n          \"orderRelevant\": true,\r\n          \"value\": [\r\n              {\r\n                  \"modelType\": \"Property\",\r\n                  \"value\": \"READ\"\r\n              }\r\n          ]\r\n      },\r\n      {\r\n          \"modelType\": \"SubmodelElementCollection\",\r\n          \"idShort\": \"targetInformation\",\r\n          \"value\": [\r\n              {\r\n                  \"modelType\": \"SubmodelElementList\",\r\n                  \"idShort\": \"aasIds\",\r\n                  \"orderRelevant\": true,\r\n                  \"value\": [\r\n                      {\r\n                          \"modelType\": \"Property\",\r\n                          \"value\": \"DPPProductID3\"\r\n                      }\r\n                  ]\r\n              },\r\n              {\r\n                  \"modelType\": \"Property\",\r\n                  \"value\": \"aas-registry\",\r\n                  \"idShort\": \"@type\"\r\n              }\r\n          ]\r\n      }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerThree_AASRepo",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "FrameSuppplierToken",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{supplier_frame_password}}",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{supplier_frame_username}}",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"modelType\": \"SubmodelElementCollection\",\r\n  \"idShort\": \"Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguYWFzcmVwb3NpdG9yeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uQWFzVGFyZ2V0SW5mb3JtYXRpb24=\",\r\n  \"value\": [\r\n      {\r\n          \"modelType\": \"Property\",\r\n          \"value\": \"Customer_Three\",\r\n          \"idShort\": \"role\"\r\n      },\r\n      {\r\n          \"modelType\": \"SubmodelElementList\",\r\n          \"idShort\": \"action\",\r\n          \"orderRelevant\": true,\r\n          \"value\": [\r\n              {\r\n                  \"modelType\": \"Property\",\r\n                  \"value\": \"READ\"\r\n              }\r\n          ]\r\n      },\r\n      {\r\n          \"modelType\": \"SubmodelElementCollection\",\r\n          \"idShort\": \"targetInformation\",\r\n          \"value\": [\r\n              {\r\n                  \"modelType\": \"SubmodelElementList\",\r\n                  \"idShort\": \"aasIds\",\r\n                  \"orderRelevant\": true,\r\n                  \"value\": [\r\n                      {\r\n                          \"modelType\": \"Property\",\r\n                          \"value\": \"DPPProductID3\"\r\n                      }\r\n                  ]\r\n              },\r\n              {\r\n                  \"modelType\": \"Property\",\r\n                  \"value\": \"aas\",\r\n                  \"idShort\": \"@type\"\r\n              }\r\n          ]\r\n      }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerThree_SMRegAllSMCombinedRules",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "FrameSuppplierToken",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{supplier_frame_password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{supplier_frame_username}}",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"modelType\": \"SubmodelElementCollection\",\r\n    \"idShort\": \"Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguc3VibW9kZWxyZWdpc3RyeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uU3VibW9kZWxSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u\",\r\n    \"value\": [\r\n        {\r\n            \"modelType\": \"Property\",\r\n            \"value\": \"Customer_Three\",\r\n            \"idShort\": \"role\"\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementList\",\r\n            \"idShort\": \"action\",\r\n            \"orderRelevant\": true,\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"READ\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementCollection\",\r\n            \"idShort\": \"targetInformation\",\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"SubmodelElementList\",\r\n                    \"idShort\": \"submodelIds\",\r\n                    \"orderRelevant\": true,\r\n                    \"value\": [\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/8295_0120_2142_8124\"\r\n                        },\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/0002_7132_3042_7151\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"submodel-registry\",\r\n                    \"idShort\": \"@type\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerThree_SMRepoAllSMCombinedRules",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "FrameSuppplierToken",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{supplier_frame_password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{supplier_frame_username}}",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"modelType\": \"SubmodelElementCollection\",\r\n    \"idShort\": \"Q3VzdG9tZXJfVGhyZWVSRUFEb3JnLmVjbGlwc2UuZGlnaXRhbHR3aW4uYmFzeXguc3VibW9kZWxyZXBvc2l0b3J5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5TdWJtb2RlbFRhcmdldEluZm9ybWF0aW9u\",\r\n    \"value\": [\r\n        {\r\n            \"modelType\": \"Property\",\r\n            \"value\": \"Customer_Three\",\r\n            \"idShort\": \"role\"\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementList\",\r\n            \"idShort\": \"action\",\r\n            \"orderRelevant\": true,\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"READ\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementCollection\",\r\n            \"idShort\": \"targetInformation\",\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"SubmodelElementList\",\r\n                    \"idShort\": \"submodelIds\",\r\n                    \"orderRelevant\": true,\r\n                    \"value\": [\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/8295_0120_2142_8124\"\r\n                        },\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/0002_7132_3042_7151\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"modelType\": \"SubmodelElementList\",\r\n                    \"idShort\": \"submodelElementIdShortPaths\",\r\n                    \"orderRelevant\": true,\r\n                    \"value\": [\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"*\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"submodel\",\r\n                    \"idShort\": \"@type\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CustomerFour",
+					"item": [
+						{
+							"name": "ResetRules",
+							"item": [
+								{
+									"name": "Reset_AASRegistry",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "{{workstation_1_clientsecret}}",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "{{workstation_1_clientid}}",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "{{access_token_url}}",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "FrameSuppplierToken",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5hYXNyZWdpc3RyeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uQWFzUmVnaXN0cnlUYXJnZXRJbmZvcm1hdGlvbg==",
+											"host": [
+												"{{dataspace_url}}"
+											],
+											"port": "8089",
+											"path": [
+												"submodels",
+												"{{security_submodel_id}}",
+												"submodel-elements",
+												"Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5hYXNyZWdpc3RyeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uQWFzUmVnaXN0cnlUYXJnZXRJbmZvcm1hdGlvbg=="
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Reset_AASRepo",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "{{workstation_1_clientsecret}}",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "{{workstation_1_clientid}}",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "{{access_token_url}}",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "FrameSuppplierToken",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5hYXNyZXBvc2l0b3J5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNUYXJnZXRJbmZvcm1hdGlvbg==",
+											"host": [
+												"{{dataspace_url}}"
+											],
+											"port": "8089",
+											"path": [
+												"submodels",
+												"{{security_submodel_id}}",
+												"submodel-elements",
+												"Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5hYXNyZXBvc2l0b3J5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNUYXJnZXRJbmZvcm1hdGlvbg=="
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Reset_SMReg",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "{{workstation_1_clientsecret}}",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "{{workstation_1_clientid}}",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "{{access_token_url}}",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "FrameSuppplierToken",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5zdWJtb2RlbHJlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5TdWJtb2RlbFJlZ2lzdHJ5VGFyZ2V0SW5mb3JtYXRpb24=",
+											"host": [
+												"{{dataspace_url}}"
+											],
+											"port": "8089",
+											"path": [
+												"submodels",
+												"{{security_submodel_id}}",
+												"submodel-elements",
+												"Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5zdWJtb2RlbHJlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5TdWJtb2RlbFJlZ2lzdHJ5VGFyZ2V0SW5mb3JtYXRpb24="
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Reset_SMRepo",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "{{workstation_1_clientsecret}}",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "{{workstation_1_clientid}}",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "{{access_token_url}}",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "FrameSuppplierToken",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5zdWJtb2RlbHJlcG9zaXRvcnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLlN1Ym1vZGVsVGFyZ2V0SW5mb3JtYXRpb24=",
+											"host": [
+												"{{dataspace_url}}"
+											],
+											"port": "8089",
+											"path": [
+												"submodels",
+												"{{security_submodel_id}}",
+												"submodel-elements",
+												"Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5zdWJtb2RlbHJlcG9zaXRvcnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLlN1Ym1vZGVsVGFyZ2V0SW5mb3JtYXRpb24="
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "CustomerFour_AASRegistry",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{supplier_frame_password}}",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "FrameSuppplierToken",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "refreshTokenUrl",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{supplier_frame_username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"modelType\": \"SubmodelElementCollection\",\r\n  \"idShort\": \"Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5hYXNyZWdpc3RyeS5mZWF0dXJlLmF1dGhvcml6YXRpb24uQWFzUmVnaXN0cnlUYXJnZXRJbmZvcm1hdGlvbg==\",\r\n  \"value\": [\r\n      {\r\n          \"modelType\": \"Property\",\r\n          \"value\": \"Customer_Four\",\r\n          \"idShort\": \"role\"\r\n      },\r\n      {\r\n          \"modelType\": \"SubmodelElementList\",\r\n          \"idShort\": \"action\",\r\n          \"orderRelevant\": true,\r\n          \"value\": [\r\n              {\r\n                  \"modelType\": \"Property\",\r\n                  \"value\": \"READ\"\r\n              }\r\n          ]\r\n      },\r\n      {\r\n          \"modelType\": \"SubmodelElementCollection\",\r\n          \"idShort\": \"targetInformation\",\r\n          \"value\": [\r\n              {\r\n                  \"modelType\": \"SubmodelElementList\",\r\n                  \"idShort\": \"aasIds\",\r\n                  \"orderRelevant\": true,\r\n                  \"value\": [\r\n                      {\r\n                          \"modelType\": \"Property\",\r\n                          \"value\": \"DPPProductID4\"\r\n                      }\r\n                  ]\r\n              },\r\n              {\r\n                  \"modelType\": \"Property\",\r\n                  \"value\": \"aas-registry\",\r\n                  \"idShort\": \"@type\"\r\n              }\r\n          ]\r\n      }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerFour_AASRepo",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "FrameSuppplierToken",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{supplier_frame_password}}",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{supplier_frame_username}}",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"modelType\": \"SubmodelElementCollection\",\r\n  \"idShort\": \"Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5hYXNyZXBvc2l0b3J5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNUYXJnZXRJbmZvcm1hdGlvbg==\",\r\n  \"value\": [\r\n      {\r\n          \"modelType\": \"Property\",\r\n          \"value\": \"Customer_Four\",\r\n          \"idShort\": \"role\"\r\n      },\r\n      {\r\n          \"modelType\": \"SubmodelElementList\",\r\n          \"idShort\": \"action\",\r\n          \"orderRelevant\": true,\r\n          \"value\": [\r\n              {\r\n                  \"modelType\": \"Property\",\r\n                  \"value\": \"READ\"\r\n              }\r\n          ]\r\n      },\r\n      {\r\n          \"modelType\": \"SubmodelElementCollection\",\r\n          \"idShort\": \"targetInformation\",\r\n          \"value\": [\r\n              {\r\n                  \"modelType\": \"SubmodelElementList\",\r\n                  \"idShort\": \"aasIds\",\r\n                  \"orderRelevant\": true,\r\n                  \"value\": [\r\n                      {\r\n                          \"modelType\": \"Property\",\r\n                          \"value\": \"DPPProductID4\"\r\n                      }\r\n                  ]\r\n              },\r\n              {\r\n                  \"modelType\": \"Property\",\r\n                  \"value\": \"aas\",\r\n                  \"idShort\": \"@type\"\r\n              }\r\n          ]\r\n      }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerFour_SMRegAllSMCombinedRules",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "FrameSuppplierToken",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{supplier_frame_password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{supplier_frame_username}}",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"modelType\": \"SubmodelElementCollection\",\r\n    \"idShort\": \"Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5zdWJtb2RlbHJlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5TdWJtb2RlbFJlZ2lzdHJ5VGFyZ2V0SW5mb3JtYXRpb24=\",\r\n    \"value\": [\r\n        {\r\n            \"modelType\": \"Property\",\r\n            \"value\": \"Customer_Four\",\r\n            \"idShort\": \"role\"\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementList\",\r\n            \"idShort\": \"action\",\r\n            \"orderRelevant\": true,\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"READ\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementCollection\",\r\n            \"idShort\": \"targetInformation\",\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"SubmodelElementList\",\r\n                    \"idShort\": \"submodelIds\",\r\n                    \"orderRelevant\": true,\r\n                    \"value\": [\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/4520_1120_2142_9776\"\r\n                        },\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/5582_0130_4042_9275\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"submodel-registry\",\r\n                    \"idShort\": \"@type\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerFour_SMRepoAllSMCombinedRules",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "FrameSuppplierToken",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "{{supplier_frame_password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{supplier_frame_username}}",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"modelType\": \"SubmodelElementCollection\",\r\n    \"idShort\": \"Q3VzdG9tZXJfRm91clJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5zdWJtb2RlbHJlcG9zaXRvcnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLlN1Ym1vZGVsVGFyZ2V0SW5mb3JtYXRpb24=\",\r\n    \"value\": [\r\n        {\r\n            \"modelType\": \"Property\",\r\n            \"value\": \"Customer_Four\",\r\n            \"idShort\": \"role\"\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementList\",\r\n            \"idShort\": \"action\",\r\n            \"orderRelevant\": true,\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"READ\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementCollection\",\r\n            \"idShort\": \"targetInformation\",\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"SubmodelElementList\",\r\n                    \"idShort\": \"submodelIds\",\r\n                    \"orderRelevant\": true,\r\n                    \"value\": [\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/4520_1120_2142_9776\"\r\n                        },\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/5582_0130_4042_9275\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"modelType\": \"SubmodelElementList\",\r\n                    \"idShort\": \"submodelElementIdShortPaths\",\r\n                    \"orderRelevant\": true,\r\n                    \"value\": [\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"*\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"submodel\",\r\n                    \"idShort\": \"@type\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Production",
+					"item": [
+						{
+							"name": "ResetProduction",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{dataspace_url}}:5000/product-scheduler/reset-production/{{dpp_prod_id_1}}",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "5000",
+									"path": [
+										"product-scheduler",
+										"reset-production",
+										"{{dpp_prod_id_1}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "StartProduction",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{dataspace_url}}:5000/product-scheduler/start-production/{{dpp_prod_id_1}}",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "5000",
+									"path": [
+										"product-scheduler",
+										"start-production",
+										"{{dpp_prod_id_1}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "SubmodelPolicyHolder",
+					"item": [
+						{
+							"name": "DELETE_RULE",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "Reg",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements/R2VhclN1cHBsaWVyUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements",
+										"R2VhclN1cHBsaWVyUkVBRG9yZy5lY2xpcHNlLmRpZ2l0YWx0d2luLmJhc3l4LmFhc3JlZ2lzdHJ5LmZlYXR1cmUuYXV0aG9yaXphdGlvbi5BYXNSZWdpc3RyeVRhcmdldEluZm9ybWF0aW9u"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE_SECURITY_SUBMODEL",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "Reg",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ADD_RULE",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "Reg",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"modelType\": \"SubmodelElementCollection\",\r\n    \"idShort\": \"TWFudWZhY3R1cmVyVHlyZVJFQURvcmcuZWNsaXBzZS5kaWdpdGFsdHdpbi5iYXN5eC5zdWJtb2RlbHJlcG9zaXRvcnkuZmVhdHVyZS5hdXRob3JpemF0aW9uLlN1Ym1vZGVsVGFyZ2V0SW5mb3JtYXRpb24=\",\r\n    \"value\": [\r\n        {\r\n            \"modelType\": \"Property\",\r\n            \"value\": \"ManufacturerTyre\",\r\n            \"idShort\": \"role\"\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementList\",\r\n            \"idShort\": \"action\",\r\n            \"orderRelevant\": true,\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"READ\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"modelType\": \"SubmodelElementCollection\",\r\n            \"idShort\": \"targetInformation\",\r\n            \"value\": [\r\n                {\r\n                    \"modelType\": \"SubmodelElementList\",\r\n                    \"idShort\": \"submodelIds\",\r\n                    \"orderRelevant\": true,\r\n                    \"value\": [\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/2153_5191_9042_0707\"\r\n                        },\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/2553_5191_9042_9633\"\r\n                        },\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"https://example.com/ids/sm/9224_5191_9042_9970\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"modelType\": \"SubmodelElementList\",\r\n                    \"idShort\": \"submodelElementIdShortPaths\",\r\n                    \"orderRelevant\": true,\r\n                    \"value\": [\r\n                        {\r\n                            \"modelType\": \"Property\",\r\n                            \"value\": \"*\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"modelType\": \"Property\",\r\n                    \"value\": \"submodel\",\r\n                    \"idShort\": \"@type\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}/submodel-elements",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}",
+										"submodel-elements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RETRIEVE_ALL_RULES",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "Reg",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels/{{security_submodel_id}}",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels",
+										"{{security_submodel_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ADD_SECURITY_SUBMODEL",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "{{workstation_1_clientsecret}}",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "{{workstation_1_clientid}}",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "{{access_token_url}}",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "Reg",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"modelType\": \"Submodel\",\r\n    \"id\": \"SecuritySubmodel\",\r\n    \"idShort\": \"TechnicalData\",\r\n    \"kind\":\"Instance\",\r\n    \"submodelElements\": [],\r\n    \"semanticId\": {\r\n        \"keys\": [\r\n            {\r\n                \"type\": \"GlobalReference\",\r\n                \"value\": \"0173-1#01-AFZ615#016\"\r\n            }\r\n        ],\r\n        \"type\": \"ExternalReference\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dataspace_url}}:8089/submodels",
+									"host": [
+										"{{dataspace_url}}"
+									],
+									"port": "8089",
+									"path": [
+										"submodels"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "dataspace_url",
+			"value": "http://localhost"
+		},
+		{
+			"key": "supplier_frame_id",
+			"value": "SupplierFrame"
+		},
+		{
+			"key": "supplier_frame_secret",
+			"value": "vblqZgXc6QLs17Vw4zRNNoGpa1VB3ndH"
+		},
+		{
+			"key": "security_submodel_id",
+			"value": "U2VjdXJpdHlTdWJtb2RlbA=="
+		},
+		{
+			"key": "supplier_frame_username",
+			"value": "alice"
+		},
+		{
+			"key": "supplier_frame_password",
+			"value": "alice",
+			"type": "default"
+		},
+		{
+			"key": "basyx_client_id",
+			"value": "basyx-client-api"
+		},
+		{
+			"key": "admin_username",
+			"value": "john.doe"
+		},
+		{
+			"key": "admin_password",
+			"value": "johndoe",
+			"type": "default"
+		},
+		{
+			"key": "supplier_gear_clientid",
+			"value": "SupplierGear"
+		},
+		{
+			"key": "supplier_gear_clientsecret",
+			"value": "oiunidBFmZn5SZFpTj0xHY0hRiNDwzom"
+		},
+		{
+			"key": "supplier_gear_username",
+			"value": "bob"
+		},
+		{
+			"key": "supplier_gear_password",
+			"value": "bob",
+			"type": "string"
+		},
+		{
+			"key": "supplier_tyre_clientid",
+			"value": "SupplierTyre"
+		},
+		{
+			"key": "supplier_tyre_clientsecret",
+			"value": "ZhWg3CQqTOgTzbQE77YuTZM5V6CNBfWl"
+		},
+		{
+			"key": "supplier_tyre_username",
+			"value": "carol"
+		},
+		{
+			"key": "supplier_tyre_password",
+			"value": "carol",
+			"type": "default"
+		},
+		{
+			"key": "manufacturer_a_clientid",
+			"value": "ManufacturerA"
+		},
+		{
+			"key": "manufacturer_a_clinetsecret",
+			"value": "IOaRZpVYELuLjk7HecYe9gp5gkJx20Fh"
+		},
+		{
+			"key": "manufacturer_a_username",
+			"value": "dave"
+		},
+		{
+			"key": "manufacturer_a_password",
+			"value": "dave",
+			"type": "string"
+		},
+		{
+			"key": "workstation_1_clientid",
+			"value": "workstation-1"
+		},
+		{
+			"key": "workstation_1_clientsecret",
+			"value": "nY0mjyECF60DGzNmQUjL81XurSl8etom"
+		},
+		{
+			"key": "access_token_url",
+			"value": "http://localhost:9097/realms/D4E/protocol/openid-connect/token",
+			"type": "string"
+		},
+		{
+			"key": "dpp_prod_id_1",
+			"value": "RFBQUHJvZHVjdElEMQ=="
+		},
+		{
+			"key": "dpp_prod_id_2",
+			"value": "RFBQUHJvZHVjdElEMg==",
+			"type": "string"
+		},
+		{
+			"key": "dpp_prod_id_3",
+			"value": "RFBQUHJvZHVjdElEMw==",
+			"type": "string"
+		},
+		{
+			"key": "dpp_prod_id_4",
+			"value": "RFBQUHJvZHVjdElENA==",
+			"type": "string"
+		}
+	]
+}

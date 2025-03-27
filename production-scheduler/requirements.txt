@@ -1,0 +1,7 @@
+thread6
+Flask
+flask-cors
+flask-restx
+basyx-python-sdk
+requests
+gunicorn
