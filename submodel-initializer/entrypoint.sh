@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the URL and body data to request the OAuth2 token
-TOKEN_URL="http://keycloak-rbac:8080/identity-management/realms/D4E/protocol/openid-connect/token"
+TOKEN_URL="http://keycloak:8080/identity-management/realms/D4E/protocol/openid-connect/token"
 BODY="client_id=workstation-1&client_secret=nY0mjyECF60DGzNmQUjL81XurSl8etom&grant_type=client_credentials&scope=openid"
 
 # Fetch the OAuth2 token

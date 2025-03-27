@@ -1,4 +1,45 @@
+version: '3.8'
+
 services:
+  keycloak:
+    build:
+      context: ./keycloak
+      dockerfile: Dockerfile
+      args:
+        HTTP_PROXY: ${HTTP_PROXY}
+        HTTPS_PROXY: ${HTTPS_PROXY}
+    container_name: keycloak
+    environment:
+      HOSTNAME: ${HOSTNAME}
+      PORT: ${PORT}
+      WEB_UI_BASE_PATH: ${WEB_UI_BASE_PATH}
+      KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN}
+      KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
+      KC_PROXY: ${KC_PROXY}
+      jgroups_dns_query: keycloak
+      PROXY_ADDRESS_FORWARDING: ${PROXY_ADDRESS_FORWARDING}
+      KC_HEALTH_ENABLED: ${KC_HEALTH_ENABLED}
+      KC_METRICS_ENABLED: ${KC_METRICS_ENABLED}
+      KC_HTTP_ENABLED: ${KC_HTTP_ENABLED}
+      KC_HTTP_RELATIVE_PATH: ${KC_HTTP_RELATIVE_PATH}
+      KC_HOSTNAME_URL: ${KC_HOSTNAME_URL}
+      KC_HOSTNAME_ADMIN_URL: ${KC_HOSTNAME_ADMIN_URL}
+      KEYCLOAK_IMPORT: ${KEYCLOAK_IMPORT}
+      KC_SPI_INITIALIZER_ISSUER_BASE_URI: ${KC_SPI_INITIALIZER_ISSUER_BASE_URI}
+    command: ["start-dev", "--import-realm", "--health-enabled=true"]
+    ports:
+      - "9097:8080"
+    healthcheck:
+      test: ['CMD-SHELL', '[ -f /tmp/HealthCheck.java ] || echo "public class HealthCheck { public static void main(String[] args) throws java.lang.Throwable { System.exit(java.net.HttpURLConnection.HTTP_OK == ((java.net.HttpURLConnection)new java.net.URL(args[0]).openConnection()).getResponseCode() ? 0 : 1); } }" > /tmp/HealthCheck.java && java /tmp/HealthCheck.java http://localhost:8080${KC_HTTP_RELATIVE_PATH}/health/live']
+      interval: 5s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    networks:
+      shared-net:
+        aliases:
+          - keycloak
+
   nginx:
     container_name: nginx
     build: ./nginx
@@ -15,75 +56,34 @@ services:
         aliases:
           - nginx
 
-  keycloak:
-    build:
-      context: ./keycloak
-      dockerfile: Dockerfile
-      args:
-        HTTP_PROXY: ${HTTP_PROXY}
-        HTTPS_PROXY: ${HTTPS_PROXY}
-    container_name: keycloak-rbac
-
-    environment:
-      HOSTNAME: ${HOSTNAME}
-      WEB_UI_BASE_PATH: ${WEB_UI_BASE_PATH}
-      KEYCLOAK_ADMIN: admin
-      KEYCLOAK_ADMIN_PASSWORD: changeit
-      KC_PROXY: edge
-      jgroups_dns_query: keycloak
-      PROXY_ADDRESS_FORWARDING: true
-      KC_HEALTH_ENABLED: true
-      KC_METRICS_ENABLED: true
-      KC_HTTP_ENABLED: true
-      KC_HTTP_RELATIVE_PATH: /identity-management
-      KC_HOSTNAME_URL: https://${HOSTNAME}/identity-management
-      KC_HOSTNAME_ADMIN_URL: https://${HOSTNAME}/identity-management/
-      KEYCLOAK_IMPORT: /opt/keycloak/data/import/BaSyx-realm.json
-      KC_SPI_INITIALIZER_ISSUER_BASE_URI: http://keycloak-rbac:8080/identity-management
-    command: ["start-dev", "--import-realm", "--health-enabled=true"]
-    ports:
-      - 9097:8080
-    # volumes:
-    #   - ./keycloak/realm:/opt/keycloak/data/import
-    healthcheck:
-      test: ['CMD-SHELL', '[ -f /tmp/HealthCheck.java ] || echo "public class HealthCheck { public static void main(String[] args) throws java.lang.Throwable { System.exit(java.net.HttpURLConnection.HTTP_OK == ((java.net.HttpURLConnection)new java.net.URL(args[0]).openConnection()).getResponseCode() ? 0 : 1); } }" > /tmp/HealthCheck.java && java /tmp/HealthCheck.java http://localhost:8080/identity-management/health/live']
-      interval: 5s
-      timeout: 5s
-      retries: 15
-      start_period: 45s
-    networks:
-      - shared-net
-
   mongo:
     image: mongo:5.0.10
-    # Provide mongo config
-    restart: always
+    container_name: mongo
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongoAdmin
       MONGO_INITDB_ROOT_PASSWORD: mongoPassword
-    # Set health checks to wait until mongo has started
+    ports:
+      - 27017:27017
+    networks:
+      shared-net:
+        aliases:
+          - mongo
     healthcheck:
       test: mongo
       interval: 10s
       start_period: 5s
       retries: 5
-    # Maps tcp port to host
-    ports:
-      - 27017:27017
-    networks:
-      - shared-net
 
-  # AAS Environment
   aas-env:
-    image: eclipsebasyx/aas-environment:$BASYX_VERSION
-    container_name: aas-env-rbac
+    image: eclipsebasyx/aas-environment:${BASYX_VERSION}
+    container_name: aas-env
     environment:
-      BASYX_EXTERNALURL: "https://${HOSTNAME}/aas-environment"
+      BASYX_EXTERNALURL: ${AAS_ENV_EXTERNAL_URL}
     volumes:
       - ./config/aas-env.properties:/application/application.properties
       - ./config/rules/aas_env_rbac_rules.json:/application/rbac_rules.json
     ports:
-      - '8081:8081'
+      - "8081:8081"
     restart: always
     depends_on:
       aas-registry:
@@ -91,12 +91,13 @@ services:
       sm-registry:
         condition: service_healthy
     networks:
-      - shared-net
+      shared-net:
+        aliases:
+          - aas-env
 
-  # AAS Registry
   aas-registry:
-    image: eclipsebasyx/aas-registry-log-mongodb:$BASYX_VERSION
-    container_name: secured-aas-registry-log-mongo-rbac
+    image: eclipsebasyx/aas-registry-log-mongodb:${BASYX_VERSION}
+    container_name: aas-registry
     ports:
       - "8082:8080"
     environment:
@@ -107,11 +108,11 @@ services:
       BASYX_FEATURE_AUTHORIZATION_ENABLED: true
       BASYX_FEATURE_AUTHORIZATION_TYPE: rbac
       BASYX_FEATURE_AUTHORIZATION_JWTBEARERTOKENPROVIDER: keycloak
-      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://keycloak-rbac:8080/identity-management/realms/D4E
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://keycloak:8080/identity-management/realms/D4E
       BASYX_FEATURE_AUTHORIZATION_RBAC_FILE: file:/workspace/config/rbac_rules.json
       BASYX_FEATURE_AUTHORIZATION_RULES_BACKEND: Submodel
       BASYX_FEATURE_AUTHORIZATION_RULES_BACKEND_SUBMODEL_AUTHORIZATION_ENDPOINT: http://security-submodel:8081/submodels/U2VjdXJpdHlTdWJtb2RlbA==
-      BASYX_FEATURE_AUTHORIZATION_RULES_BACKEND_SUBMODEL_AUTHORIZATION_TOKEN_ENDPOINT: http://keycloak-rbac:8080/identity-management/realms/D4E/protocol/openid-connect/token
+      BASYX_FEATURE_AUTHORIZATION_RULES_BACKEND_SUBMODEL_AUTHORIZATION_TOKEN_ENDPOINT: http://keycloak:8080/identity-management/realms/D4E/protocol/openid-connect/token
       BASYX_FEATURE_AUTHORIZATION_RULES_BACKEND_SUBMODEL_AUTHORIZATION_GRANT_TYPE: CLIENT_CREDENTIALS
       BASYX_FEATURE_AUTHORIZATION_RULES_BACKEND_SUBMODEL_AUTHORIZATION_CLIENT_ID: workstation-1
       BASYX_FEATURE_AUTHORIZATION_RULES_BACKEND_SUBMODEL_AUTHORIZATION_CLIENT_SECRET: nY0mjyECF60DGzNmQUjL81XurSl8etom
@@ -128,12 +129,15 @@ services:
       security-submodel:
         condition: service_healthy
     networks:
-      - shared-net
+      shared-net:
+        aliases:
+          - aas-registry
 
-  # Submodel Registry
   sm-registry:
-    image: eclipsebasyx/submodel-registry-log-mongodb:$BASYX_VERSION
-    container_name: secured-sm-registry-log-mongo-rbac
+    image: eclipsebasyx/submodel-registry-log-mongodb:${BASYX_VERSION}
+    container_name: sm-registry
+    ports:
+      - "8083:8080"
     environment:
       SERVER_SERVLET_CONTEXT_PATH: /
       BASYX_CORS_ALLOWED_ORIGINS: '*'
@@ -142,40 +146,39 @@ services:
       BASYX_FEATURE_AUTHORIZATION_ENABLED: true
       BASYX_FEATURE_AUTHORIZATION_TYPE: rbac
       BASYX_FEATURE_AUTHORIZATION_JWTBEARERTOKENPROVIDER: keycloak
-      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://keycloak-rbac:8080/identity-management/realms/D4E
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://keycloak:8080/identity-management/realms/D4E
       BASYX_FEATURE_AUTHORIZATION_RBAC_FILE: file:/workspace/config/rbac_rules.json
       BASYX_FEATURE_AUTHORIZATION_RULES_BACKEND: Submodel
       BASYX_FEATURE_AUTHORIZATION_RULES_BACKEND_SUBMODEL_AUTHORIZATION_ENDPOINT: http://security-submodel:8081/submodels/U2VjdXJpdHlTdWJtb2RlbA==
-      BASYX_FEATURE_AUTHORIZATION_RULES_BACKEND_SUBMODEL_AUTHORIZATION_TOKEN_ENDPOINT: http://keycloak-rbac:8080/identity-management/realms/D4E/protocol/openid-connect/token
+      BASYX_FEATURE_AUTHORIZATION_RULES_BACKEND_SUBMODEL_AUTHORIZATION_TOKEN_ENDPOINT: http://keycloak:8080/identity-management/realms/D4E/protocol/openid-connect/token
       BASYX_FEATURE_AUTHORIZATION_RULES_BACKEND_SUBMODEL_AUTHORIZATION_GRANT_TYPE: CLIENT_CREDENTIALS
       BASYX_FEATURE_AUTHORIZATION_RULES_BACKEND_SUBMODEL_AUTHORIZATION_CLIENT_ID: workstation-1
       BASYX_FEATURE_AUTHORIZATION_RULES_BACKEND_SUBMODEL_AUTHORIZATION_CLIENT_SECRET: nY0mjyECF60DGzNmQUjL81XurSl8etom
-    ports:
-      - "8083:8080"
+    volumes:
+      - ./config/rules/sm_registry_rbac_rules.json:/workspace/config/rbac_rules.json
+    restart: always
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 15s
-    volumes:
-      - ./config/rules/sm_registry_rbac_rules.json:/workspace/config/rbac_rules.json
     depends_on:
       security-submodel:
         condition: service_healthy
-    restart: always
     networks:
-      - shared-net
-  
-  # Security SM Repo
+      shared-net:
+        aliases:
+          - sm-registry
+
   security-submodel:
-    image: eclipsebasyx/submodel-repository:$BASYX_VERSION
-    container_name: conf-security-submodel
+    image: eclipsebasyx/submodel-repository:${BASYX_VERSION}
+    container_name: security-submodel
     volumes:
       - ./config/security-sm.properties:/application/application.properties
       - ./config/rules/sec_sm_rbac_rules.json:/application/rbac_rules.json
     ports:
-      - '8089:8081'
+      - "8089:8081"
     restart: always
     depends_on:
       keycloak:
@@ -187,12 +190,15 @@ services:
       retries: 3
       start_period: 15s
     networks:
-      - shared-net
+      shared-net:
+        aliases:
+          - security-submodel
 
   security-sm-setup:
+    container_name: security-sm-setup
     build:
       context: ./submodel-initializer
-      dockerfile: Dockerfile 
+      dockerfile: Dockerfile
     depends_on:
       security-submodel:
         condition: service_healthy
@@ -202,38 +208,42 @@ services:
       - ./submodel-initializer/initial-submodel.json:/initial-submodel.json
     entrypoint: [ "bash", "-c", "sh /entrypoint.sh"]
     networks:
-      - shared-net
-      
-  # AAS Discovery
+      shared-net:
+        aliases:
+          - security-sm-setup
+
   aas-discovery:
-    image: eclipsebasyx/aas-discovery:$BASYX_VERSION
+    image: eclipsebasyx/aas-discovery:${BASYX_VERSION}
     container_name: aas-discovery
     volumes:
       - ./config/aas-discovery.properties:/application/application.properties
       - ./config/rules/aas_discovery_rbac_rules.json:/application/rbac_rules.json
     ports:
-      - '8084:8081'
+      - "8084:8081"
     restart: always
     networks:
-      - shared-net
+      shared-net:
+        aliases:
+          - aas-discovery
+
 
   aas-web-ui:
     image: eclipsebasyx/aas-gui:${AAS_WEBUI_VERSION}
     container_name: aas-web-ui
-    restart: always
     ports:
       - "3000:3000"
+    restart: always
     environment:
       BASE_PATH: ${WEB_UI_BASE_PATH}
-      AAS_REGISTRY_PATH:      "https://${HOSTNAME}/aas-registry"
-      SUBMODEL_REGISTRY_PATH: "https://${HOSTNAME}/sm-registry"
-      AAS_DISCOVERY_PATH:     "https://${HOSTNAME}/aas-discovery/lookup/shells"
-      AAS_REPO_PATH:          "https://${HOSTNAME}/aas-environment/shells"
-      SUBMODEL_REPO_PATH:     "https://${HOSTNAME}/aas-environment/submodels"
-      CD_REPO_PATH:           "https://${HOSTNAME}/aas-environment/concept-descriptions"
-      KEYCLOAK_URL: https://${HOSTNAME}/identity-management
-      KEYCLOAK_REALM: D4E
-      KEYCLOAK_CLIENT_ID: basyx-web-ui
+      AAS_REGISTRY_PATH: ${AAS_REGISTRY_URL}
+      SUBMODEL_REGISTRY_PATH: ${SM_REGISTRY_URL}
+      AAS_DISCOVERY_PATH: ${DISCOVERY_URL}
+      AAS_REPO_PATH: ${AAS_REPO_URL}
+      SUBMODEL_REPO_PATH: ${SUBMODEL_REPO_URL}
+      CD_REPO_PATH: ${CD_REPO_URL}
+      KEYCLOAK_URL: ${KEYCLOAK_URL}
+      KEYCLOAK_REALM: ${KEYCLOAK_REALM}
+      KEYCLOAK_CLIENT_ID: ${KEYCLOAK_CLIENT_ID}
     depends_on:
       - aas-env
     networks:
@@ -241,19 +251,16 @@ services:
         aliases:
           - aas-web-ui
 
-
-
-  # Production Scheduler
   production-scheduler:
     container_name: production-scheduler
     build:
       context: ./production-scheduler
       dockerfile: Dockerfile
     ports:
-      - '5000:5000'
+      - "5000:5000"
     environment:
       BASE_URL: http://aas-env:8081
-      TOKEN_ENDPOINT: http://keycloak-rbac:8080/identity-management/realms/D4E/protocol/openid-connect/token
+      TOKEN_ENDPOINT: http://keycloak:8080${KC_HTTP_RELATIVE_PATH}/realms/D4E/protocol/openid-connect/token
       CLIENT_ID: workstation-1
       CLIENT_SECRET: nY0mjyECF60DGzNmQUjL81XurSl8etom
       PRODUCTION_DELAY: 5
@@ -262,8 +269,10 @@ services:
       aas-env:
         condition: service_healthy
     networks:
-      - shared-net
+      shared-net:
+        aliases:
+          - production-scheduler
 
 networks:
   shared-net:
-    external: true
+    driver: bridge

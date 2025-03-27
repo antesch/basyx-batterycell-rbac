@@ -35,7 +35,7 @@ events {}
          }
 
         location /conf-security-submodel/ {
-             proxy_pass http://conf-security-submodel:8081/;
+             proxy_pass http://security-submodel:8081/;
              proxy_set_header Host $host;
              proxy_set_header X-Real-IP $remote_addr;
              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -60,7 +60,7 @@ events {}
          }
 
         location /identity-management/{
-             proxy_pass http://keycloak-rbac:8080/identity-management/;
+             proxy_pass http://keycloak:8080/identity-management/;
              proxy_set_header Host $host;
              proxy_set_header X-Real-IP $remote_addr;
              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;

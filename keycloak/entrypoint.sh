@@ -1,23 +1,34 @@
 #!/bin/sh
 set -e
 
-# Sicherstellen, dass Variablen gesetzt sind
-: "${HOSTNAME:?HOSTNAME not set}"
-: "${WEB_UI_BASE_PATH:?WEB_UI_BASE_PATH not set}"
+echo "----------- Keycloak Entrypoint -----------"
+echo "HOSTNAME: $HOSTNAME"
+echo "PORT: $PORT"
+echo "WEB_UI_BASE_PATH: $WEB_UI_BASE_PATH"
 
-echo "HOSTNAME is: $HOSTNAME"
-echo "WEB_UI_BASE_PATH is: $WEB_UI_BASE_PATH"
+# Default-Port setzen, nur wenn leer
+if [ -z "$PORT" ]; then
+  echo "PORT not set – assuming default 80 (no HOST_PORT suffix)"
+  HOST_PORT=""
+else
+  HOST_PORT=":$PORT"
+fi
 
-# Generieren
-envsubst '${HOSTNAME} ${WEB_UI_BASE_PATH}' < /opt/keycloak/data/import/D4E-realm.template.json > /tmp/D4E-realm.json
+echo "HOST_PORT: $HOST_PORT"
 
-# Debug-Ausgabe
+export HOSTNAME HOST_PORT WEB_UI_BASE_PATH
+
+# Template rendern
+envsubst '${HOSTNAME} ${HOST_PORT} ${WEB_UI_BASE_PATH}' \
+  < /opt/keycloak/data/import/D4E-realm.template.json \
+  > /tmp/D4E-realm.json
+
 echo "--- Rendered D4E-realm.json ---"
 cat /tmp/D4E-realm.json
 echo "-------------------------------"
 
-# Import
+# Realm importieren
 /opt/keycloak/bin/kc.sh import --file /tmp/D4E-realm.json
 
-# Start Keycloak
+# Keycloak starten
 exec /opt/keycloak/bin/kc.sh start --optimized
