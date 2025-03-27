@@ -1,20 +1,5 @@
 This demo shows the prodcution scheduling in a factory and also calculates the carbon footprint after each production steps. It also demonstrates the access levels of different users, for e.g., an Administrator can access all the AASs and its Submodels, but different customers can access only granted AAS including only ProdutionStatus, Order, and CarbonFootprint Submodels.
 
-
-## Cloning the repository
-
-```
-git clone https://erbenschell.iese.fraunhofer.de/basyx/aas-d4e-demo.git
-
-```
-```
-cd aas-d4e-demo
-```
-```
-git switch demo-batterycell
-```
-
-
 ## Potential problems
 
 It is possible that the line ending of 'entrypoint.sh' changes from LF to CRLF when checking out to a Windows host. Please check and change if necessary (e.g. in Notepad++ or VSCode), otherwise the security submodel cannot be initialized.
@@ -24,13 +9,12 @@ It is possible that the line ending of 'entrypoint.sh' changes from LF to CRLF w
 To run the demo containers, you need to have Docker installed on your device.
 
 
-### Run the BaSyx containers including the Production Scheduler container
+### Setup Hostname in .env
 
-1. Open a terminal in this folder and cd into demo-batterycell
-```
-cd demo-batterycell
-```
-2. Run the following command to start the containers:
+If the demo is not to run on the local host, the respective host name and port must be defined in the .env file. In addition, a proxy can be specified so that APT and Maven have access to the repositories during the installation. The port that must be specified is basically the port to which the reverse proxy (nginx) listens and forwards the incoming requests to the respective services.
+
+
+### Run the BaSyx containers including the Production Scheduler container
 
 ```sh
 docker compose up -d
