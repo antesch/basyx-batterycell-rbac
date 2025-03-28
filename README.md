@@ -2,7 +2,7 @@ This demo shows the prodcution scheduling in a factory and also calculates the c
 
 ## Potential problems
 
-It is possible that the line ending of 'entrypoint.sh' changes from LF to CRLF when checking out to a Windows host. Please check and change if necessary (e.g. in Notepad++ or VSCode), otherwise the security submodel cannot be initialized.
+It is possible that the line ending of 'entrypoint.sh' changes from LF to CRLF when checking out to a Windows host. Please check and change if necessary (e.g. in Notepad++ or VSCode), otherwise multiple services which are using entrypoints (Keycloak, Security Submodel, NGINX) cannot be initialized.
 
 ### Running the demo on localhost
 
