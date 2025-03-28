@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "de5042b0-2852-454b-9b40-3942fccba0ac",
+		"_postman_id": "4374721b-e8df-4e0a-80a2-42c58ac68b89",
 		"name": "Demo-Batterycell-RBAC",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "41540389"
@@ -3255,7 +3255,7 @@
 	"variable": [
 		{
 			"key": "dataspace_url",
-			"value": "http://localhost"
+			"value": "http://localhost:8080"
 		},
 		{
 			"key": "supplier_frame_id",
@@ -3352,7 +3352,7 @@
 		},
 		{
 			"key": "access_token_url",
-			"value": "http://localhost/identity-management/realms/D4E/protocol/openid-connect/token",
+			"value": "http://localhost:8080/identity-management/realms/D4E/protocol/openid-connect/token",
 			"type": "string"
 		},
 		{
